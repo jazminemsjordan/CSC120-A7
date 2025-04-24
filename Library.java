@@ -38,7 +38,11 @@ public class Library extends Building implements LibraryRequirements {
    * @param title a string with the book's details, formatted as "Book by Author"
    */
   public void checkOut(String title) {
-    this.collection.replace(title, false);
+    if (this.collection.get(title) == true) {
+      this.collection.replace(title, false);
+    } else {
+      throw new RuntimeException("This title is already checked out!");
+    }
   }
 
   /**
@@ -55,7 +59,7 @@ public class Library extends Building implements LibraryRequirements {
    * @return boolean whether the library has the title
    */
   public boolean containsTitle(String title) {
-    if (this.collection.contains(title)) {
+    if (this.collection.containsKey(title)) {
       return true;
     } else {
       return false;
