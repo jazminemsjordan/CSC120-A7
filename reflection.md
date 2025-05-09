@@ -7,6 +7,11 @@ I actually really enjoyed working with inheritance. I appreciate how it cut out 
 
 
 Revision log: 
+
     - changed constructor order for house with hasDiningRoom at end
+    
     - swapped "contains" for "containsKey" method to properly check for a title in the library inventory
-    - throws exception if trying to check out an already checked out book
+    
+    - throws exceptions if trying to check out an already checked out book or return a book that has already been returned
+
+    - added check for number of cups in cafe
