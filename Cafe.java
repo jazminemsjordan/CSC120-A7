@@ -28,7 +28,7 @@ public class Cafe extends Building implements CafeRequirements{
      * @param nCreams the number of splashes of cream in the coffee
      */
     public void sellCoffee(int size, int nSugarPackets, int nCreams) {
-        if (size <= this.nCoffeeOunces && nSugarPackets <= this.nSugarPackets && nCreams <= this.nCreams) {
+        if (size <= this.nCoffeeOunces && nSugarPackets <= this.nSugarPackets && nCreams <= this.nCreams && this.nCups >= 1) {
             this.nCoffeeOunces -= size;
             this.nSugarPackets -= nSugarPackets;
             this.nCreams -= nCreams;
