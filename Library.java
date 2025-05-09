@@ -80,7 +80,7 @@ public class Library extends Building implements LibraryRequirements {
 
   /** Method to check if a book in the collection is currently checked out
    * @param title a string with the book's details, formatted as "Book by Author"
-   * @return true if the title exists in the collection AND is available for checkout, false otherwise
+   * @return boolean if the title exists in the collection AND is available for checkout, false otherwise
    */
   public boolean isAvailable(String title) {
     if (this.collection.get(title) == true) {
@@ -105,5 +105,8 @@ public class Library extends Building implements LibraryRequirements {
   
   public static void main(String[] args) {
     Library myLibrary = new Library("Neilson Library", "7 Neilson Drive", 4);
+    myLibrary.addTitle("moby dick");
+    myLibrary.checkOut("moby dick");
+    myLibrary.returnBook("moby dick");
   }
 }

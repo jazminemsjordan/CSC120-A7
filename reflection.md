@@ -15,3 +15,5 @@ Revision log:
     - throws exceptions if trying to check out an already checked out book or return a book that has already been returned
 
     - added check for number of cups in cafe
+
+    - added @param to some javadoc comments

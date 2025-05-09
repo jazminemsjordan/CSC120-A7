@@ -37,6 +37,7 @@ public class House extends Building implements HouseRequirements{
 
   /***
    * Method to move a resident into the house
+   * @param s student to move into the house
    */
   public void moveIn(Student s) {
     if (this.residents.contains(s)) {
@@ -47,6 +48,7 @@ public class House extends Building implements HouseRequirements{
 
   /***
    * Method to move a resident out of the house
+   * @param s student to move out of the house
    * @return the student who is moving out
    */
   public Student moveOut(Student s) {
@@ -59,6 +61,7 @@ public class House extends Building implements HouseRequirements{
 
   /***
    * Method to check if a student lives in the house
+   * @param s student to check the house list for
    * @return whether the student is on the list of house residents
    */
   public boolean isResident(Student s) {
